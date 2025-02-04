@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy 18th Birthday Ania!</title>
+    <style>
+        body {
+            background: #000;
+            color: #ff0000;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            border: 3px solid #ff0000;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        button {
+            background: #ff0000;
+            color: black;
+            padding: 15px 30px;
+            font-size: 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff3333;
+        }
+
+        .message {
+            font-size: 18px;
+            margin: 20px;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+        }
+
+        iframe {
+            display: none;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span>🎉</span> Happy Birthday, Ania! <span>🎉</span></h1>
+        <p class="message">Kliknij przycisk i zabieraj się do otwierania prezentu!</p>
+        <button onclick="playAudio()">LET'S GO!</button>
+        <p class="message">(Kocham Cię!)</p>
+    </div>
+
+    <iframe id="ytplayer" allow="autoplay; encrypted-media"></iframe>
+
+    <script>
+        function playAudio() {
+            let iframe = document.getElementById('ytplayer');
+            iframe.style.display = 'block'; // Pokazuje odtwarzacz, jeśli chcesz
+            iframe.src = "https://www.youtube.com/embed/Eo-KmOd3i7s?autoplay=1";
+        }
+    </script>
+</body>
+</html>
