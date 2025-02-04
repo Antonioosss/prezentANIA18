@@ -50,11 +50,6 @@
             margin: 20px;
             text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
         }
-
-        iframe {
-            display: none;
-            max-width: 100%;
-        }
     </style>
 </head>
 <body>
@@ -65,13 +60,12 @@
         <p class="message">(Kocham Cię!)</p>
     </div>
 
-    <iframe id="ytplayer" allow="autoplay; encrypted-media"></iframe>
+    <audio id="birthdayAudio" src="https://www.example.com/happy-birthday-song.mp3"></audio>
 
     <script>
         function playAudio() {
-            let iframe = document.getElementById('ytplayer');
-            iframe.style.display = 'block'; // Pokazuje odtwarzacz, jeśli chcesz
-            iframe.src = "https://www.youtube.com/embed/Eo-KmOd3i7s?autoplay=1";
+            let audio = document.getElementById('birthdayAudio');
+            audio.play();
         }
     </script>
 </body>
